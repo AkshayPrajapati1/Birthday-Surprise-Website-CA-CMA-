@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Special Message 💖</title>
+
+<style>
+body {
+    margin: 0;
+    background: black;
+    color: #00ffcc;
+    font-family: 'Courier New', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+#text {
+    font-size: 22px;
+    width: 80%;
+}
+
+.name {
+    color: #ff4d6d;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.final {
+    color: gold;
+    font-size: 26px;
+    margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div>
+    <div id="text"></div>
+    <div class="name" id="name"></div>
+    <div class="final" id="final"></div>
+</div>
+
+<script>
+const message = [
+    "Loading special message...",
+    "Access granted 💻",
+    "Date detected: 15 July 🎉",
+    "Someone very special was born today ❤️",
+    "She is not just beautiful...",
+    "She is strong 💪",
+    "Focused 📚",
+    "And chasing CA & CMA dreams 📊",
+    "Late night studies... sacrifices... dedication...",
+    "But she never gives up 🚀",
+    "And one day...",
+    "She will become a successful Chartered Accountant 🎓"
+];
+
+let i = 0;
+let j = 0;
+let currentText = "";
+let isDeleting = false;
+
+function type() {
+    if (i < message.length) {
+        currentText = message[i];
+        document.getElementById("text").innerHTML = currentText.substring(0, j);
+
+        if (!isDeleting && j < currentText.length) {
+            j++;
+            setTimeout(type, 40);
+        } else {
+            isDeleting = true;
+            setTimeout(() => {
+                j = 0;
+                isDeleting = false;
+                i++;
+                type();
+            }, 800);
+        }
+    } else {
+        document.getElementById("name").innerHTML = "Dear CA RONI ❤️";
+        document.getElementById("final").innerHTML = "🎂 Happy Birthday 🎂<br>Future CA 💖";
+    }
+}
+
+type();
+</script>
+
+</body>
+</html>
+
