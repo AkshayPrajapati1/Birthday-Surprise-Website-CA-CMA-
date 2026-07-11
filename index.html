@@ -1,9 +1,10 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Special Message 💖</title>
+<title>Special Message </title>
 
 <style>
 body {
@@ -16,6 +17,7 @@ body {
     align-items: center;
     height: 100vh;
     text-align: center;
+    flex-direction: column;
 }
 
 #text {
@@ -34,6 +36,16 @@ body {
     font-size: 26px;
     margin-top: 20px;
 }
+
+/* Credit Style */
+.credit {
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    font-size: 14px;
+    color: #ffffff80;
+    font-family: Arial, sans-serif;
+}
 </style>
 </head>
 
@@ -45,12 +57,17 @@ body {
     <div class="final" id="final"></div>
 </div>
 
+<!-- CREDIT -->
+<div class="credit">
+    ✨ Created by AK ✨
+</div>
+
 <script>
 const message = [
     "Loading special message...",
     "Access granted 💻",
     "Date detected: 15 July 🎉",
-    "Someone very special was born today ❤️",
+    "Someone very special was born today ",
     "She is not just beautiful...",
     "She is strong 💪",
     "Focused 📚",
@@ -84,8 +101,8 @@ function type() {
             }, 800);
         }
     } else {
-        document.getElementById("name").innerHTML = "Dear CA RONI ❤️";
-        document.getElementById("final").innerHTML = "🎂 Happy Birthday 🎂<br>Future CA 💖";
+        document.getElementById("name").innerHTML = "Dear CA RONI ";
+        document.getElementById("final").innerHTML = "🎂 Happy Birthday 🎂<br>Future CA ";
     }
 }
 
